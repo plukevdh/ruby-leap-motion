@@ -1,1 +1,1 @@
-require 'leap/motion'
+require_relative 'motion/motion'

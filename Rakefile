@@ -22,11 +22,10 @@ RDoc::Task.new do |rdoc|
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
-task :compile do
-  chdir 'ext' do
-    ruby 'extconf.rb'
-    sh   'make'
-  end
+require "rake/extensiontask"
+
+Rake::ExtensionTask.new "motion" do |ext|
+  ext.lib_dir = "lib/motion"
 end
 
 Bundler::GemHelper.install_tasks

@@ -15,13 +15,12 @@ else
 end
 
 inc, lib = dir_config('leap')
-p inc, lib
 
 if [nil, nil] != [inc, lib]
   $LDFLAGS << " -L#{lib} -lLeap"
   $CFLAGS << " -Wall -g -I#{inc}"
 else
-  crash "Please use --with-leap-lib and --with-leap-include to give the path to the lib and includes paths"
+  crash "Please use --with-leap-lib= and --with-leap-include= to give the path to the LeapSDK lib and includes paths"
 end
 
 create_makefile("leap/motion")
