@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.files      = `git ls-files`.split("\n")
   s.test_files = `git ls-files -- test/*`.split("\n")
   s.extra_rdoc_files = ["LICENSE.txt","README.rdoc"]
-  s.extensions       = ["ext/extconf.rb"]
+  s.extensions       = ["ext/motion/extconf.rb"]
   s.require_paths    = ["lib"]
 
   s.add_development_dependency("shoulda")
