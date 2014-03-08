@@ -1,6 +1,6 @@
 $:.unshift(".")
 
-require 'motion'
+require 'leap-motion'
 
 class MyListener < Leap::Motion::Listener
   def on_init x
@@ -48,4 +48,3 @@ gone = gets
 print gone
 
 controller.remove_listener listener
-
