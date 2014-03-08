@@ -1,5 +1,3 @@
-$:.unshift(".")
-
 require 'leap-motion'
 
 class MyListener < Leap::Motion::Listener
@@ -26,7 +24,6 @@ class MyListener < Leap::Motion::Listener
   def on_frame x
     print "on frame"
     p x
-
   end
 
   def on_focus_gained x
